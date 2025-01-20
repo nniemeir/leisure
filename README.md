@@ -1,9 +1,9 @@
 # Leisure
 Leisure is a script that utilizes fzf to consolidate the searching and launching of entries in various types of media libraries.
 
-Additionally, you can filter for a specific runner in the case of games.
-
 ![Example of Leisure UI](preview.png)
+
+Additionally, you can filter for a specific runner in the case of games.
 
 ## Table of Contents 
 - [Supported Media Types](#supported-media-types) 
