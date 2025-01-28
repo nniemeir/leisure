@@ -292,14 +292,14 @@ enumerate_runners() {
 get_available_runners() {
 	local unavailable_runners=""
 	for runner in $(echo -e "$SUPPORTED_RUNNERS"); do
-		if [ ! $(enumerate_runners "$runner") ]; then
+		if [[ ! $(enumerate_runners "$runner") ]]; then
 			local unavailable_runners="$unavailable_runners$runner"
 		fi
 	done
 
 	local available_runners=""
 	for runner in $(echo -e "$SUPPORTED_RUNNERS"); do
-		if [ ! "$unavailable_runners" =~ "$runner" ]; then
+		if [[ ! "$unavailable_runners" =~ "$runner" ]]; then
 			local available_runners
 			available_runners="$available_runners$runner\n"
 		fi
