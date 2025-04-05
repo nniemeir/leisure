@@ -33,7 +33,7 @@ if ! [ -f "$CONFIG_DIR/paths.conf" ]; then
 fi
 
 if ! [ -f "$CONFIG_DIR/games.csv" ]; then
-    if ! cp config/games.conf "$CONFIG_DIR"; then
+    if ! cp config/games.csv "$CONFIG_DIR"; then
         echo "Failed to copy games.csv template to configuration directory"
         exit 1
     fi
