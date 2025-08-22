@@ -56,9 +56,8 @@ Currently, these must be manually added to the previews directory in your config
 
 To do so, place a PNG file with the same basename as the corresponding category or entry in the list.
 
-
 ## Supported Game Runners
-For a runner to appear, it must be installed and an entry using it in **games.csv** must exist. In the case of emulators, they must be installed via flatpak and their corresponding path must be set in paths.conf. 
+For a runner to appear, it must be installed and an entry using it in **games.csv** must exist. In the case of emulators, they must be installed via flatpak and their corresponding ROM's path must be set in paths.conf. 
 * BlastEm
 * bsnes
 * DeSmuME
