@@ -373,7 +373,7 @@ launch_game() {
 		flatpak run net.rpcs3.RPCS3 "$PS3_ROMS/$game_id" >/dev/null 2>&1 &
 		;;
 	Steam)
-		steam steam://rungame_id/"$game_id" >/dev/null 2>&1 &
+		steam -applaunch "$game_id" >/dev/null 2>&1 &
 		;;
 	*)
 		echo "The runner $runner is not currently supported"
