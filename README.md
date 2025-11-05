@@ -41,12 +41,13 @@ There are a few files that must be edited before using Leisure.
 This is where the paths to your media libraries will be held. If a path is not specified, its corresponding media type will be omitted. 
 
 ### games.csv
-This file should contain an entry for each game you have installed. Due to the number of supported game runners, entries must be added manually in the following format:
+This file should contain an entry for each game you have installed. None can be provided as the runner for an entry to use the launch command itself for the game_id field. Due to the number of supported game runners, entries must be added manually in the following format:
 ```
 Title;Runner;ID or ROM filename
 Todd of Lore 4;Steam;377160
 Nuke Dookthem 3D;Lutris;6
 Grand Theft Walrus;PCSX2;GTW.iso
+Brutal WOOD;None;gzwood -file BRUTAL.pk3
 ```
 
 ## Preview Images
@@ -57,7 +58,7 @@ Currently, these must be manually added to the previews directory in your config
 To do so, place a PNG file with the same basename as the corresponding category or entry in the list.
 
 ## Supported Game Runners
-For a runner to appear, it must be installed and an entry using it in **games.csv** must exist. In the case of emulators, they must be installed via flatpak and their corresponding ROM's path must be set in paths.conf. Additionally, None can be provided as the runner for an entry to use the launch command itself for the game_id field. 
+For a runner to appear, it must be installed and an entry using it in **games.csv** must exist. In the case of emulators, they must be installed via flatpak and their corresponding ROM's path must be set in paths.conf.
 * BlastEm
 * bsnes
 * DeSmuME
