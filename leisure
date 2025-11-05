@@ -4,7 +4,7 @@
 
 LEISURE_VERSION="2.2"
 
-SUPPORTED_RUNNERS="BlastEm\nbsnes\nDeSmuME\nDolphin\nFlycast\nHeroic\nLutris\nmGBA\nNestopia\nPCSX2\nPPSSPP\nRPCS3\nSteam"
+SUPPORTED_RUNNERS="BlastEm\nbsnes\nDeSmuME\nDolphin\nFlycast\nHeroic\nLutris\nmGBA\nNestopia\nNone\nPCSX2\nPPSSPP\nRPCS3\nSteam"
 
 main() {
 	command -v fzf >/dev/null 2>&1 || {
@@ -362,6 +362,9 @@ launch_game() {
 		;;
 	Nestopia)
 		flatpak run ca._0ldsk00l.Nestopia "$NES_ROMS/$game_id" >/dev/null 2>&1 &
+		;;
+	None)
+		eval "$game_id >/dev/null 2>&1 &"
 		;;
 	PCSX2)
 		flatpak run net.pcsx2.PCSX2 "$PS2_ROMS/$game_id" >/dev/null 2>&1 &
